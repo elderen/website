@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Animation from './components/animation.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h>hello</h>
+        <Animation />
       </>
     )
   }
