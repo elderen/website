@@ -12,8 +12,19 @@ app.use(parser.json())
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')))
 
-// APIs
-
+// APIs to allow endpoints to be requested
+app.get("/", (req, res)=>{
+  res.sendFile('index.html', {root: path.join(__dirname, 'public') })
+})
+app.get("/about", (req, res)=>{
+  res.sendFile('index.html', {root: path.join(__dirname, 'public') })
+})
+app.get("/projects", (req, res)=>{
+  res.sendFile('index.html', {root: path.join(__dirname, 'public') })
+})
+app.get("/resume", (req, res)=>{
+  res.sendFile('index.html', {root: path.join(__dirname, 'public') })
+})
 
 // Listening...
 app.listen(port, ()=>{

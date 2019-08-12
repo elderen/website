@@ -1,11 +1,10 @@
 import React from "react";
-import { useSpring, useSprings, useTrail, animated as a } from "react-spring";
-import ComponentOne from "./componentOne.jsx"
-import ComponentTwo from "./componentTwo.jsx"
-import ComponentThree from "./componentThree.jsx"
-import ComponentFour from "./componentFour.jsx"
+import { useTrail, animated as a } from "react-spring";
+import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+import Title from "./title.jsx"
 
-const items = [<ComponentOne/>, <ComponentTwo/>, <ComponentThree/>, <ComponentFour/>];
+const items = ["/about", "/projects", "/resume"];
+const names = ["About", "Projects", "Resume"];
 const config = { mass: 5, tension: 2000, friction: 200 };
 
 export default Animation = () => {
@@ -17,9 +16,9 @@ export default Animation = () => {
   const trail = useTrail(items.length, {
     config,
     opacity: headers ? 1 : 0,
-    x: headers ? 0 : -20,
+    x: headers ? 10 : -40,
     height: headers ? 80 : 0,
-    from: { opacity: 0, x: -20, height: 0 }
+    from: { opacity: 0, x: -40, height: 0 }
   });
 
   // const [trail, set, stop] = useTrail(number, () => ({ opacity: 1 }))
@@ -31,10 +30,8 @@ export default Animation = () => {
 
   return (
     <div className="container">
-      {/* <button onClick={() => displayGreeting(s => !s)}>
-        Click
-      </button> */}
       <div className="header">
+        <Title />
         {trail.map(({ x, height, ...rest }, index) => (
           <a.div
             key={index}
@@ -44,7 +41,11 @@ export default Animation = () => {
               transform: x.interpolate(x => `translate3d(0,${x}px,0)`)
             }}
           >
-            <a.div >{items[index]}</a.div>
+            <div >
+              <Link to={items[index]}>
+                {names[index]}
+              </Link>
+            </div>
           </a.div>
         ))}
       </div>

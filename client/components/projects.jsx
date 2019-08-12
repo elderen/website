@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-export default class ComponentThree extends React.Component {
+export default class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ export default class ComponentThree extends React.Component {
   render() {
     return (
       <div>
-        <p>C3</p>
+        <p>Projects</p>
       </div>
     )
   }

@@ -36,6 +36,8 @@
     "express": "^4.17.1",
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
+    "react-router-dom": "^5.0.1",
+    "react-sizeme": "^2.6.7",
     "react-spring": "^8.0.27"
   }
 }
