@@ -35,10 +35,15 @@ body {
   flex: 1;
   align-self: center;
   text-align: center;
-  font-size: 2.6vw;
+  font-size: 2.9vmin;
   margin-bottom: 2.0vw;
 }
 
 .componentOne:hover {
   cursor: pointer;
+}
+
+.resume {
+  width: 100%;
+  height: auto;
 }
