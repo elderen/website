@@ -1,18 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { useSpring, animated as a } from "react-spring";
 
-export default class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: 1
-    }
-  }
-  render() {
-    return (
-      <div>
-        <p>About</p>
-      </div>
-    )
-  }
+const About = () => {
+  const [props, set, stop] = useSpring(() => ({ opacity: 0}))
+  set({ opacity: 1 })
+
+  return (
+    <a.div style={props}>
+      <p className="about"> About </p>
+    </a.div>
+  )
 }
+export default About;

@@ -35,7 +35,7 @@ body {
   flex: 1;
   align-self: center;
   text-align: center;
-  font-size: 2.9vmin;
+  font-size: 2.4vmax;
   margin-bottom: 2.0vw;
 }
 
@@ -46,4 +46,8 @@ body {
 .resume {
   width: 100%;
   height: auto;
+}
+
+.about {
+  text-align: center;
 }
